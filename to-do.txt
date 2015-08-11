@@ -1,0 +1,11 @@
+//TO DO LIST
+/*
+1) Save key and secret to heroku config
+2) Find out how to reference those env variables in app
+3) Push GIT of fitbit-node (with key/secret safely removed) to GitHub
+    *May need to change the callback URL in app.js
+4) Edit Pebble fitbit app.js to receive the access tokens and store them indefinitely
+    *console.log the values to make sure they are coming accross
+5) Write code to do simple 'STEPS' request and display on screen on APP load or button click
+6) Consider adding icons to the app
+*/
