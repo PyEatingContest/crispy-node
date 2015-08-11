@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/stevensandiford/crispy-node',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/stevensandiford/.npm/fitbit-node/1.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/stevensandiford/.npm/fitbit-node/1.0.0/package.tgz',
+10 verbose tar pack   '/Users/stevensandiford/crispy-node' ]
+11 verbose tarball /Users/stevensandiford/.npm/fitbit-node/1.0.0/package.tgz
+12 verbose folder /Users/stevensandiford/crispy-node
+13 info prepublish fitbit-node@1.0.0
+14 verbose addLocalTarball adding from inside cache /Users/stevensandiford/.npm/fitbit-node/1.0.0/package.tgz
+15 silly cache afterAdd fitbit-node@1.0.0
+16 verbose afterAdd /Users/stevensandiford/.npm/fitbit-node/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/stevensandiford/.npm/fitbit-node/1.0.0/package/package.json written
+18 silly install resolved [ { name: 'fitbit-node',
+18 silly install resolved     version: '1.0.0',
+18 silly install resolved     description: 'Basic fitbit node.js file',
+18 silly install resolved     main: 'fitbitClient.js',
+18 silly install resolved     directories: { example: 'examples' },
+18 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly install resolved     repository:
+18 silly install resolved      { type: 'git',
+18 silly install resolved        url: 'git+https://github.com/davidlygagnon/fitbit-node.git' },
+18 silly install resolved     author: '',
+18 silly install resolved     license: 'ISC',
+18 silly install resolved     bugs: { url: 'https://github.com/davidlygagnon/fitbit-node/issues' },
+18 silly install resolved     homepage: 'https://github.com/davidlygagnon/fitbit-node#readme',
+18 silly install resolved     dependencies:
+18 silly install resolved      { 'body-parser': '^1.13.3',
+18 silly install resolved        'cookie-parser': '^1.3.5',
+18 silly install resolved        ejs: '^2.3.3',
+18 silly install resolved        express: '^4.13.3',
+18 silly install resolved        'express-session': '^1.11.3',
+18 silly install resolved        oauth: '^0.9.13',
+18 silly install resolved        querystring: '^0.2.0',
+18 silly install resolved        util: '^0.10.3' },
+18 silly install resolved     gitHead: '5b7331960930c1fab04fd7d7dad2c7d55a9718e4',
+18 silly install resolved     readme: 'ERROR: No README data found!',
+18 silly install resolved     _id: 'fitbit-node@1.0.0',
+18 silly install resolved     _shasum: 'c84173853378587a3da376c9792d008ad02c44bc',
+18 silly install resolved     _from: '../../Users/stevensandiford/crispy-node',
+18 silly install resolved     _resolved: 'file:../../Users/stevensandiford/crispy-node' } ]
+19 info install fitbit-node@1.0.0 into /usr/local/lib
+20 info installOne fitbit-node@1.0.0
+21 verbose installOne of fitbit-node to /usr/local/lib not in flight; installing
+22 verbose lock using /Users/stevensandiford/.npm/_locks/fitbit-node-e1913d6b483ac4bf.lock for /usr/local/lib/node_modules/fitbit-node
+23 silly install write writing fitbit-node 1.0.0 to /usr/local/lib/node_modules/fitbit-node
+24 verbose unbuild lib/node_modules/fitbit-node
+25 silly gentlyRm /usr/local/lib/node_modules/fitbit-node is being purged from base /usr/local
+26 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/fitbit-node
+27 verbose tar unpack /Users/stevensandiford/.npm/fitbit-node/1.0.0/package.tgz
+28 verbose tar unpacking to /usr/local/lib/node_modules/fitbit-node
+29 silly gentlyRm /usr/local/lib/node_modules/fitbit-node is being purged
+30 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/fitbit-node
+31 silly gunzTarPerm modes [ '755', '644' ]
+32 error tar.unpack untar error /Users/stevensandiford/.npm/fitbit-node/1.0.0/package.tgz
+33 verbose unlock done using /Users/stevensandiford/.npm/_locks/fitbit-node-e1913d6b483ac4bf.lock for /usr/local/lib/node_modules/fitbit-node
+34 verbose fstream_path /usr/local/lib/node_modules/fitbit-node
+35 verbose fstream_type Directory
+36 verbose fstream_class DirWriter
+37 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/fitbit-node'
+37 verbose stack     at Error (native)
+38 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+38 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+38 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+39 verbose cwd /Users/stevensandiford/crispy-node
+40 error Darwin 14.4.0
+41 error argv "node" "/usr/local/bin/npm" "install" "-g"
+42 error node v0.12.7
+43 error npm  v2.11.3
+44 error path /usr/local/lib/node_modules/fitbit-node
+45 error code EACCES
+46 error errno -13
+47 error Error: EACCES, mkdir '/usr/local/lib/node_modules/fitbit-node'
+47 error     at Error (native)
+47 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/fitbit-node']
+47 error   errno: -13,
+47 error   code: 'EACCES',
+47 error   path: '/usr/local/lib/node_modules/fitbit-node',
+47 error   fstream_type: 'Directory',
+47 error   fstream_path: '/usr/local/lib/node_modules/fitbit-node',
+47 error   fstream_class: 'DirWriter',
+47 error   fstream_stack:
+47 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+47 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+47 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+48 error Please try running this command again as root/Administrator.
+49 verbose exit [ -13, true ]
+50 verbose unbuild lib/node_modules/fitbit-node
+51 silly gentlyRm /usr/local/lib/node_modules/fitbit-node is being purged from base /usr/local
+52 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/fitbit-node
