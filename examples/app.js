@@ -28,7 +28,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 // Fitbit initialization
-fitbitClient.init(process.env.CONSUMERKEY,process.env.CONSUMERSECRET,"ancient-harbor-2084.herokuapp.com")
+fitbitClient.init(process.env.CONSUMERKEY,process.env.CONSUMERSECRET,"https://shielded-temple-2008.herokuapp.com/oauth_callback")
 
 // Routes
 
