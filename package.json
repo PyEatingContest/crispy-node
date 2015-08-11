@@ -4,11 +4,12 @@
   "description": "Basic fitbit node.js file",
   "main": "fitbitClient.js",
   "engines": {
-    "npm": "2.11.3"
+    "npm": "2.11.3",
+    "node": "0.12.7"
   },
-  "directories": {
-    "example": "examples"
-  },
+  //"directories": {
+//    "example": "examples"
+  //},
   "scripts": {
     "start": "node app.js"
   },
