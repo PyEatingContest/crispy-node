@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Basic fitbit node.js file",
   "main": "fitbitClient.js",
+  "engines": {
+    "npm": "2.11.3"
+  },
   "directories": {
     "example": "examples"
   },
