@@ -7,18 +7,18 @@
     "example": "examples"
   },
   "scripts": {
-    "start": "node /examples/app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidlygagnon/fitbit-node.git"
+    "url": "git+https://github.com/PyEatingContest/crispy-node.git"
   },
-  "author": "",
+  "author": "steve",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/davidlygagnon/fitbit-node/issues"
+    "url": "https://github.com/PyEatingContest/crispy-node/issues"
   },
-  "homepage": "https://github.com/davidlygagnon/fitbit-node#readme",
+  "homepage": "https://github.com/PyEatingContest/crispy-node",
   "dependencies": {
     "body-parser": "^1.13.3",
     "cookie-parser": "^1.3.5",
