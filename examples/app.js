@@ -28,7 +28,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 // Fitbit initialization
-fitbitClient.init(process.env.CONSUMERKEY,process.env.CONSUMERSECRET,"https://shielded-temple-2008.herokuapp.com/oauth_callback")
+fitbitClient.init(process.env.CONSUMERKEY,process.env.CONSUMERSECRET,process.env.OAUTH_CB_URL)
 
 // Routes
 
@@ -82,11 +82,9 @@ app.get('/getWeight', function (request, response) {
 */
 
 // Run evernote version
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
-/*
+//http.createServer(app).listen(app.get('port'), function(){
+//  console.log("Express server listening on port " + app.get('port'));
+//});
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
-*/
