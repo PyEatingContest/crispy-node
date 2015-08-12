@@ -7,7 +7,7 @@ var http = require('http'),
     session = require('express-session'),
     cookieParser = require('cookie-parser'),
     util = require('util'),
-    fitbitClient = require('../fitbitClient.js');
+    fitbitClient = require('fitbitClient.js');
 
 
 var sess = {
