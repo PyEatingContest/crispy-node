@@ -65,7 +65,7 @@ app.get('/oauth_callback', function (request, response) {
                 };
                 var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(result));
                 console.log("Warping to: " + location);
-                response.redirect(location;)
+                response.redirect(location);
                 //response.render('index', {ex_data: ex_data}); //
             }
     });
