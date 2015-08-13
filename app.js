@@ -54,7 +54,8 @@ app.get('/oauth_callback', function (request, response) {
                 //Store in session variable
                 request.session.oauth_access_token = oauth_access_token;
                 request.session.oauth_access_token_secret = oauth_access_token_secret;
-                var ex_data = request.session.oauth_access_token;
+                //var ex_data = request.session.oauth_access_token;
+                var ex_data = JSON.stringify(request);
                 fitbitClient.setToken(oauth_access_token);
                 fitbitClient.setTokenSecret(oauth_access_token_secret);
                 
@@ -66,7 +67,7 @@ app.get('/oauth_callback', function (request, response) {
                 var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(result));
                 console.log("Warping to: " + location);
                 response.redirect(location);
-                //response.render('index', {ex_data: ex_data}); //
+                response.render('index', {ex_data: ex_data}); //
             }
     });
    
