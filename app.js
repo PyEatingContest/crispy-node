@@ -73,7 +73,6 @@ app.get('/oauth_callback', function (request, response) {
    
 });
 
-/*
 app.get('/getWeight', function (request, response) {
     console.log('got started');
     fitbitClient.requestResource(
@@ -90,7 +89,6 @@ app.get('/getWeight', function (request, response) {
         }
     );
 });
-*/
 
 // Run evernote version
 //http.createServer(app).listen(app.get('port'), function(){
