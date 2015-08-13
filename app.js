@@ -64,7 +64,7 @@ app.get('/oauth_callback', function (request, response) {
                     oauthAccessTokenSecret : oauth_access_token_secret,
                     userId : '-'
                 };
-                ///var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(result));
+                var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(result));
                 console.log("Warping to: " + location);
                 //response.redirect('/getWeight')
                 response.redirect(location);
