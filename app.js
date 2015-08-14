@@ -92,7 +92,7 @@ app.get('/test', function (request, response) {
     var userId = "-";
     //response.send('Seeing what this does');
    fitbitClient.requestResource(
-        '/body/log/weight/date/2015-03-01/30d.json', 
+        '/activities/date/2015-08-12.json', 
         'GET', 
         tn,
         tns,
