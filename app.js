@@ -84,27 +84,27 @@ app.get('/oauth_callback', function (request, response) {
     });
    
 });
-//'/user/:id'
-app.get('/test:tn:tns', function (request, response) {
+
+app.get('/test', function (request, response) {
     console.log('got started');
-    var tn = getQueryVariable("tn");
-    var tns = getQueryVariable("tns");
+    var tn = request.query.tn;
+    var tns = request.query.tns;
     var userId = '-';
-    response.send('Seeing what this does');
-   fitbitClient.requestResource(
-        '/activities/date/2015-08-12.json', 
-        'GET', 
-        tn,
-        tns,
-        //fitbitClient.getToken(),
-        //fitbitClient.getTokenSecret(),
-        userId,
-        function (error, data, result) {
-            var feed = JSON.parse(data);
-            response.send(feed);
-            console.log(feed);
-        }
-    );
+    response.send(tn + tns);
+   //fitbitClient.requestResource(
+    //    '/activities/date/2015-08-12.json', 
+    //    'GET', 
+    //    tn,
+    //    tns,
+    //    //fitbitClient.getToken(),
+    //    //fitbitClient.getTokenSecret(),
+    //    userId,
+    //    function (error, data, result) {
+    //        var feed = JSON.parse(data);
+    //        response.send(feed);
+    //        console.log(feed);
+    //    }
+    //);
 });
 
 // Run evernote version
