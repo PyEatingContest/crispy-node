@@ -76,6 +76,7 @@ app.get('/oauth_callback', function (request, response) {
 
 app.get('/test', function (request, response) {
     console.log('got started');
+    response.send('Seeing what this does');
    // fitbitClient.requestResource(
     //    '/body/log/weight/date/2015-03-01/30d.json', 
       //  'GET', 
