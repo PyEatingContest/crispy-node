@@ -114,9 +114,8 @@ app.get('/test', function (request, response) {
         userId,
         function (error, data, result) {
             var feed = JSON.parse(data);
-            response.send(feed);
-            console.log(error);
             console.log(feed);
+            response.send(feed);
         }
     );
 });
