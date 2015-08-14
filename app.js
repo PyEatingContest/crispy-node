@@ -74,21 +74,20 @@ app.get('/oauth_callback', function (request, response) {
    
 });
 
-app.get('/getWeight', function (request, response) {
+app.get('/test', function (request, response) {
     console.log('got started');
-    fitbitClient.requestResource(
-        '/body/log/weight/date/2015-03-01/30d.json', 
-        'GET', 
-        fitbitClient.getToken(),
-        fitbitClient.getTokenSecret(),
-        fitbitClient.getTokenSecret(),
-        userId,
-        function (error, data, result) {
-            var feed = JSON.parse(data);
-            response.send(feed);
-            console.log(feed);
-        }
-    );
+   // fitbitClient.requestResource(
+    //    '/body/log/weight/date/2015-03-01/30d.json', 
+      //  'GET', 
+        //fitbitClient.getToken(),
+        //fitbitClient.getTokenSecret(),
+        //userId,
+        //function (error, data, result) {
+        //    var feed = JSON.parse(data);
+        //    response.send(feed);
+        //    console.log(feed);
+        //}
+    //);
 });
 
 // Run evernote version
