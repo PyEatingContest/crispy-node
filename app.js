@@ -17,6 +17,17 @@ var sess = {
     saveUninitialized: true,
     userId: '-'}
 
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
 app.set('views', __dirname + '/views'); //
 app.set('view engine', 'ejs');
 
@@ -76,19 +87,24 @@ app.get('/oauth_callback', function (request, response) {
 
 app.get('/test', function (request, response) {
     console.log('got started');
-    response.send('Seeing what this does');
-   // fitbitClient.requestResource(
-    //    '/body/log/weight/date/2015-03-01/30d.json', 
-      //  'GET', 
+    var tn = getQueryVariable("tn");
+    var tns = getQueryVariable("tns");
+    var userId = "-";
+    //response.send('Seeing what this does');
+   fitbitClient.requestResource(
+        '/body/log/weight/date/2015-03-01/30d.json', 
+        'GET', 
+        tn,
+        tns,
         //fitbitClient.getToken(),
         //fitbitClient.getTokenSecret(),
-        //userId,
-        //function (error, data, result) {
-        //    var feed = JSON.parse(data);
-        //    response.send(feed);
-        //    console.log(feed);
-        //}
-    //);
+        userId,
+        function (error, data, result) {
+            var feed = JSON.parse(data);
+            response.send(feed);
+            console.log(feed);
+        }
+    );
 });
 
 // Run evernote version
