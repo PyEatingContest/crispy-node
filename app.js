@@ -119,7 +119,6 @@ app.get('/test', function (request, response) {
             console.log(feed);
         }
     );
->>>>>>> Stashed changes
 });
 
 // Run evernote version
