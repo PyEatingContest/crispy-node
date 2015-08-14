@@ -84,8 +84,8 @@ app.get('/oauth_callback', function (request, response) {
     });
    
 });
-
-app.get('/test', function (request, response) {
+//'/user/:id'
+app.get('/test:tn:tns', function (request, response) {
     console.log('got started');
     var tn = getQueryVariable("tn");
     var tns = getQueryVariable("tns");
