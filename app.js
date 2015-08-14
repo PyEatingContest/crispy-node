@@ -89,8 +89,8 @@ app.get('/test', function (request, response) {
     console.log('got started');
     var tn = getQueryVariable("tn");
     var tns = getQueryVariable("tns");
-    var userId = "-";
-    //response.send('Seeing what this does');
+    var userId = '-';
+    response.send('Seeing what this does');
    fitbitClient.requestResource(
         '/activities/date/2015-08-12.json', 
         'GET', 
