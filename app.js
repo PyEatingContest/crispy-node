@@ -87,6 +87,7 @@ app.get('/oauth_callback', function (request, response) {
 
 app.get('/test', function (request, response) {
     console.log('got started');
+<<<<<<< Updated upstream
     var tn = request.query.tn;
     var tns = request.query.tns;
     var userId = '-';
@@ -105,6 +106,22 @@ app.get('/test', function (request, response) {
     //        console.log(feed);
     //    }
     //);
+=======
+    fitbitClient.requestResource(
+        '/body/log/weight/date/2015-03-01/30d.json', 
+        'GET', 
+        fitbitClient.getToken(),
+        fitbitClient.getTokenSecret(),
+        fitbitClient.getTokenSecret(),
+        userId,
+        function (error, data, result) {
+            var feed = JSON.parse(data);
+            response.send(feed);
+            console.log(error);
+            console.log(feed);
+        }
+    );
+>>>>>>> Stashed changes
 });
 
 // Run evernote version
