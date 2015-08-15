@@ -93,7 +93,7 @@ app.get('/test', function (request, response) {
     var YYYY = myDate.getFullYear().toString();
     var MM = (myDate.getMonth()+1).toString();
     MM = (MM[1]?MM:"0"+MM[0]);
-    var DD = myDate.getDate().toString();
+    var DD = (myDate.getDate()-1).toString();
     DD = (DD[1]?DD:"0"+DD[0]);
     var fulldate = YYYY + "-" + MM + "-" + DD;
     var userId = '-';
