@@ -91,20 +91,21 @@ app.get('/test', function (request, response) {
     var tns = request.query.tns;
     var userId = '-';
     response.send(tn + tns);
-   //fitbitClient.requestResource(
-    //    '/activities/date/2015-08-12.json', 
-    //    'GET', 
-    //    tn,
-    //    tns,
+   fitbitClient.requestResource(
+       '/activities/date/2015-08-12.json', 
+       'GET', 
+        tn,
+        tns,
     //    //fitbitClient.getToken(),
     //    //fitbitClient.getTokenSecret(),
-    //    userId,
-    //    function (error, data, result) {
-    //        var feed = JSON.parse(data);
-    //        response.send(feed);
-    //        console.log(feed);
-    //    }
-    //);
+        userId,
+        function (error, data, result) {
+            var feed = JSON.parse(data);
+            response.send(feed);
+            console.log(feed);
+        }
+    );
+    /*
     fitbitClient.requestResource(
         '/body/log/weight/date/2015-03-01/30d.json', 
         'GET', 
@@ -118,6 +119,7 @@ app.get('/test', function (request, response) {
             response.send(feed);
         }
     );
+    */
 });
 
 // Run evernote version
