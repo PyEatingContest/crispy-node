@@ -89,10 +89,11 @@ app.get('/test', function (request, response) {
     console.log('got started');
     var tn = request.query.tn;
     var tns = request.query.tns;
-    var YYYY = getFullYear().toString();
-    var MM = (getMonth()+1).toString();
+    var myDate = new Date();
+    var YYYY = myDate.getFullYear().toString();
+    var MM = (myDate.getMonth()+1).toString();
     MM = (MM[1]?MM:"0"+MM[0]);
-    var DD = getDate().toString();
+    var DD = myDate.getDate().toString();
     DD = (DD[1]?DD:"0"+DD[0]);
     var fulldate = YYYY + "-" + MM + "-" + DD;
     var userId = '-';
