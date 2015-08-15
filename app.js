@@ -89,9 +89,16 @@ app.get('/test', function (request, response) {
     console.log('got started');
     var tn = request.query.tn;
     var tns = request.query.tns;
+    var YYYY = getFullYear().toString();
+    var MM = (getMonth()+1).toString();
+    MM = (MM[1]?MM:"0"+MM[0]);
+    var DD = getDate().toString();
+    DD = (DD[1]?DD:"0"+DD[0]);
+    var fulldate = YYYY + "-" + MM + "-" + DD;
     var userId = '-';
    fitbitClient.requestResource(
-       '/activities/date/2015-08-12.json', 
+       //'/activities/date/2015-08-12.json',
+       '/activities/date/'+ fulldate + '.json',
        'GET', 
         tn,
         tns,
