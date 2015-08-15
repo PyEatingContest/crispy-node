@@ -90,7 +90,6 @@ app.get('/test', function (request, response) {
     var tn = request.query.tn;
     var tns = request.query.tns;
     var userId = '-';
-    response.send(tn + tns);
    fitbitClient.requestResource(
        '/activities/date/2015-08-12.json', 
        'GET', 
