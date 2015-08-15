@@ -97,9 +97,10 @@ app.get('/test', function (request, response) {
     DD = (DD[1]?DD:"0"+DD[0]);
     var fulldate = YYYY + "-" + MM + "-" + DD;
     var userId = '-';
+    console.log(fulldate);
    fitbitClient.requestResource(
        //'/activities/date/2015-08-12.json',
-       '/activities/date/'+ fulldate + '.json',
+       '/activities/date/' + fulldate + '.json',
        'GET', 
         tn,
         tns,
